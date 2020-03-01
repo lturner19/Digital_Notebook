@@ -12,7 +12,8 @@ app.use(express.json()); //translates to json for server to read
 app.use(express.static("public"));//makes public local host
 
 
-
+require("./routes/apiRoutes")(app)
+require("./routes/htmlRoutes")(app)
 
 // Start the server on the port
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
