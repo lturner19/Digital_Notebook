@@ -1,5 +1,6 @@
 let id = db.length + 1; //Each new note will generate a new id #
 const db = require("./db/db.json");
+const fs = require("fs");
 
 
 //Setup api routes
