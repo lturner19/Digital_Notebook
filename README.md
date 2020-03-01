@@ -2,6 +2,8 @@
 
 
 ## INTRODUCTION
+As a career professional / student I want an app that will take, keep, and delete my various notes. 
+
 
 
 <br>
@@ -12,21 +14,30 @@
 1. [USAGE](#usage)
 2. [FEATURES](#features)
 3. [INSTALLATION](#installation)
-4. [TEST](#tests)
-5. [PREVIEW](#preview)
-6. [RESOURCES](#resources)
-7. [BADGES](#badges)
+4. [PREVIEW](#preview)
+5. [RESOURCES](#resources)
+6. [BADGES](#badges)
 
 
 <br>
 
 ## USAGE
 
+Users can take notes and save them in a 
 
 
 <br>
 
 ## FEATURES
+
+1. User will have the ability to create their own notes with:
+    * Header (title)
+    *  Body (text)
+
+2. Each note can be saved using the save icon
+    *Notes can still be viewed, after returning to the site.
+
+3. Individual notes can be deleted using the trash icon.
 
 
 
@@ -34,16 +45,9 @@
 
 ## INSTALLATION
 
-To run this program install (npm install) the following dependencies:
+To run this program install (npm install) the following dependency:
 
- **Express**  
-
-
-
-<br>
-
-## TESTS
-
+ **Express**: framework for node to aid in creating server-side code
 
 
 <br>
