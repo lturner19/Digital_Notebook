@@ -12,7 +12,7 @@ module.exports = function (app) {
         res.json(db);
     })
 
-    //handles users making/saving
+    //handles users making/saving notes to db
     app.post("/api/notes", function (req, res) {
 
         req.body.id = id++; //each note will have a unique id#(only part of db.json array, not visible to user)
