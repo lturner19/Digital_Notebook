@@ -23,7 +23,7 @@ As a career professional / student I want an app that will take, keep, and delet
 
 ## USAGE
 
-Users can take notes and save them in a 
+
 
 
 <br>
