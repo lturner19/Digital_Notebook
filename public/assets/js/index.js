@@ -1,6 +1,5 @@
-$document.ready(function(){
-  //jQuery code 
-  
+$(document).ready(function(){//ensuring jQuery code will work
+
 var $noteTitle = $(".note-title");
 var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
@@ -9,6 +8,7 @@ var $noteList = $(".list-container .list-group");
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
+
 
 // A function for getting all notes from the db
 var getNotes = function() {
@@ -69,16 +69,13 @@ var handleNoteSave = function() {
 var handleNoteDelete = function(event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
   event.stopPropagation();
-
-  var note = $(this)
-    .parent(".list-group-item")
-    .data();
-
-  if (activeNote.id === note.id) {
+// changed from
+  var noteId = $(this).attr("data-id") 
+  if (activeNote.id === noteId) {
     activeNote = {};
   }
 
-  deleteNote(note.id).then(function() {
+  deleteNote(noteId).then(function() {
     getAndRenderNotes();
     renderActiveNote();
   });
@@ -118,7 +115,8 @@ var renderNoteList = function(notes) {
     var $li = $("<li class='list-group-item'>").data(note);
     var $span = $("<span>").text(note.title);
     var $delBtn = $(
-      "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
+      //addition of data-id, note.id = to reflect the addition of a unique id assignment when being stored in db.json
+      "<i data-id='"+note.id+"' class='fas fa-trash-alt float-right text-danger delete-note'>"
     );
 
     $li.append($span, $delBtn);
@@ -131,6 +129,7 @@ var renderNoteList = function(notes) {
 // Gets notes from the db and renders them to the sidebar
 var getAndRenderNotes = function() {
   return getNotes().then(function(data) {
+    console.log(data);
     renderNoteList(data);
   });
 };
