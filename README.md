@@ -2,7 +2,7 @@
 
 
 ## INTRODUCTION
-As a career professional / student I want an app that will take, keep, and delete my various notes. 
+As a career professional / student I want an app that will save and delete typed notes so that I can keep an organized log of tasks, meeting notes, and homeworks that are due. 
 
 
 
@@ -23,22 +23,23 @@ As a career professional / student I want an app that will take, keep, and delet
 
 ## USAGE
 
-
+This application can be used to write, save, and then delete notes created by the user.  
 
 
 <br>
 
 ## FEATURES
+ This application uses express framework as its backend.
+ The notes are saved and retrieved from a JSON file. 
 
-1. User will have the ability to create their own notes with:
+1. Users will have the ability to create their own notes with:
     * Header (title)
     *  Body (text)
 
 2. Each note can be saved using the save icon
-    *Notes can still be viewed, after returning to the site.
+    *Notes can still be viewed, once clicked on, or after returning to the webpage.
 
 3. Individual notes can be deleted using the trash icon.
-
 
 
 <br>
@@ -54,10 +55,10 @@ To run this program install (npm install) the following dependency:
 
 ### PREVIEW
 
-![image]()
+![image](public/assets/images/Note_taker.jpg)
 
 <br><br>
-<img src="">
+<img src="public\assets\images\Note_Taker_app.gif">
 
 
 
