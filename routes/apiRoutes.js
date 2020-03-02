@@ -1,7 +1,7 @@
-let id = db.length + 1; //Each new note will generate a new id #
-const db = require("./db/db.json");
-const fs = require("fs");
 
+const db = require("../db/db.json")
+const fs = require("fs");
+let id = db.length + 1; //Each new note will generate a new id #
 
 //Setup api routes
 module.exports = function (app) {
@@ -14,14 +14,13 @@ module.exports = function (app) {
 
     //handles users making/saving notes to db
     app.post("/api/notes", function (req, res) {
-
         req.body.id = id++; //each note will have a unique id#(only part of db.json array, not visible to user)
         //pushing new notes to the db array
         db.push(req.body)
+
         fs.writeFile("./db/db.json", JSON.stringify(db), function (err, data) {
             if (err) throw err;
         })
-
         res.json(db);
     })
 
@@ -34,6 +33,7 @@ module.exports = function (app) {
             if (db[i].id === parseInt(getId)) {
                 db.splice(i, 1);
             }
+
 
         fs.writeFile("./db/db.json", JSON.stringify(db), function (err, data) {
             if (err) throw err;
