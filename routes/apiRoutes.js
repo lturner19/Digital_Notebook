@@ -1,4 +1,3 @@
-
 const db = require("../db/db.json")
 const fs = require("fs");
 let id = db.length + 1; //Each new note will generate a new id #
@@ -29,12 +28,13 @@ module.exports = function (app) {
         var getId = req.params.id;
 
         for (var i = 0; i < db.length; i++)
-            //if the db id equals the getId number, then it will be deleted
+            //if the db id equals the getId number
             if (db[i].id === parseInt(getId)) {
+                //then remove 1 element from the array
                 db.splice(i, 1);
             }
 
-
+        //writing data to the db.json file
         fs.writeFile("./db/db.json", JSON.stringify(db), function (err, data) {
             if (err) throw err;
         })
