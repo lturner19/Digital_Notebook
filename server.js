@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));//allows recognition of incoming
 app.use(express.json()); //translates to json for server to read
 app.use(express.static("public"));//makes public local host
 
-
+//Points the server to the "route" files and gives it a map on how to respond to users visit or request data from various urls.
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
