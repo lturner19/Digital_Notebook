@@ -27,13 +27,13 @@ module.exports = function (app) {
         //using the id key to select a particular note and delete it from the db
         var getId = req.params.id;
 
-        for (var i = 0; i < db.length; i++)
+        for (var i = 0; i < db.length; i++){
             //if the db id equals the getId number
             if (db[i].id === parseInt(getId)) {
                 //then remove 1 element from the array
                 db.splice(i, 1);
             }
-
+        }
         //writing data to the db.json file
         fs.writeFile("./db/db.json", JSON.stringify(db), function (err, data) {
             if (err) throw err;

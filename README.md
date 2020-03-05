@@ -55,9 +55,6 @@ To run this program install (npm install) the following dependency:
 
 ### PREVIEW
 
-![image](public/assets/images/Note_taker.jpg)
-
-<br><br>
 <img src="public\assets\images\Note_Taker_app.gif">
 
 
