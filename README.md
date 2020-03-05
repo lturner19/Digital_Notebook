@@ -23,7 +23,7 @@ As a career professional / student I want an app that will save and delete typed
 
 ## USAGE
 
-This application can be used to write, save, and then delete notes created by the user.  
+This application can be used to write and save notes or tasks created by the user.  The users can return to view their notes and delete them as needed. 
 
 
 <br>
