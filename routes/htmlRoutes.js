@@ -9,7 +9,7 @@ module.exports = function (app) {
     //changed to a slash from (*) b/c html file has homepage as (/)
     app.get("/", function (req, res) {
         //renders homepage html page
-        res.sendFile(path.join(__dirname, "./public/index.html"))
+        res.sendFile(path.join(__dirname, "../index.html"))
     })
 
     //renders notes html page
