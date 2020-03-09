@@ -87,6 +87,6 @@ Badges for Markdown
 ### BADGES
 Please click badge below 
 
-[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://lturner19.github.io/Digital_Notebook/)
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://dry-hollows-87779.herokuapp.com/)
 
 [![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
